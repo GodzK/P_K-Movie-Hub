@@ -1,0 +1,27 @@
+@plugin "daisyui";
+.container {
+  display: flex;
+  width: 100vw;
+  height: 100vh;
+  justify-content: center;
+  align-items: center;
+}
+
+.card {
+  z-index: 1000;
+  width: 100vw;
+  height: 100vh;
+  position: absolute;
+  color: white;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  background-color: rgba(26, 26, 26, 0.7); /* เพิ่มการเบลอให้พื้นหลังเป็นสีขาวโปร่งแสง */
+}
+.card h1 {
+  font-size: 4em;
+}
+.card h2{
+    font-size: 3rem;
+}

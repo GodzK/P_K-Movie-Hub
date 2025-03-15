@@ -1,0 +1,18 @@
+@import url('https://fonts.googleapis.com/css2?family=Bebas+Neue&family=IBMPlexSansThai:wght@400;700&display=swap');
+@import "tailwindcss";
+
+/* ตั้งค่าให้ตัวอักษรไทยใช้ฟอนต์ IBMPlexSansThai */
+body {
+  font-family: 'Bebas Neue', 'IBMPlexSansThai', sans-serif;
+  width: 100vw;
+}
+
+/* ถ้าข้อความเป็นภาษาไทย ให้ใช้ฟอนต์ IBMPlexSansThai */
+:lang(th) {
+  font-family: 'IBMPlexSansThai', sans-serif;
+}
+
+/* ถ้าข้อความเป็นภาษาอังกฤษ ให้ใช้ Bebas Neue */
+:lang(en) {
+  font-family: 'Bebas Neue', sans-serif;
+}
