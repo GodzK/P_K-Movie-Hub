@@ -1,18 +1,33 @@
 import { useEffect, useRef } from "react";
+import React, { JSX } from "react";
 import { gsap } from "gsap";
 import "../styles/Background.css";
 
-const Background = ({ items = [], gradientColor = "black" }) => {
-  const gridRef = useRef(null);
-  const rowRefs = useRef([]); // Array of refs for each row
+interface BackgroundProps {
+  items: JSX.Element[];
+  gradientColor?: string;
+}
 
-  // Ensure the grid has 28 items (4 rows x 7 columns) by default
+const Background: React.FC<BackgroundProps> = ({
+  items = [],
+  gradientColor = "black",
+}) => {
+  const gridRef = useRef<HTMLDivElement>(null);
+  const rowRefs = useRef<(HTMLDivElement | null)[]>([]); // Array of refs for each row
+
+  // Ensure the grid has 28 items (4 rows x 7 columns)
   const totalItems = 28;
-  const defaultItems = Array.from(
+  const defaultItems: JSX.Element[] = Array.from(
     { length: totalItems },
-    (_, index) => `Item ${index + 1}`
+    (_, index) => (
+      <div key={`default-${index}`} style={{ width: "100%", height: "100%", backgroundColor: "#333" }}>
+        {/* Placeholder content */}
+      </div>
+    )
   );
-  const combinedItems = items.length > 0 ? items.slice(0, totalItems) : defaultItems;
+  const combinedItems: JSX.Element[] = items.length > 0
+    ? [...items, ...defaultItems].slice(0, totalItems) // Combine and trim to 28 items
+    : defaultItems;
 
   useEffect(() => {
     gsap.ticker.lagSmoothing(0);
@@ -21,13 +36,13 @@ const Background = ({ items = [], gradientColor = "black" }) => {
     const baseDuration = 4; // Adjust the overall animation duration
     const speeds = [4, 5, 6, 7]; // Different speeds for each row
 
-    rowRefs.current.forEach((row, index) => {
+    const animations = rowRefs.current.map((row, index) => {
       if (row) {
         const direction = index % 2 === 0 ? 1 : -1; // Alternate movement directions
         const moveAmount = maxMoveAmount * direction;
 
         // Infinite animation loop
-        gsap.to(row, {
+        return gsap.to(row, {
           x: moveAmount,
           duration: baseDuration + speeds[index % speeds.length],
           ease: "linear",
@@ -35,8 +50,16 @@ const Background = ({ items = [], gradientColor = "black" }) => {
           yoyo: true, // Moves back and forth
         });
       }
+      return null;
     });
-  }, []);
+
+    // Cleanup GSAP animations on unmount
+    return () => {
+      animations.forEach((animation) => {
+        if (animation) animation.kill();
+      });
+    };
+  }, []); // Empty dependency array since this runs once on mount
 
   return (
     <div className="noscroll loading" ref={gridRef}>
@@ -49,25 +72,19 @@ const Background = ({ items = [], gradientColor = "black" }) => {
         <div className="gridMotion-container">
           {[...Array(4)].map((_, rowIndex) => (
             <div
-              key={rowIndex}
+              key={`row-${rowIndex}`}
               className="row"
-              ref={(el) => (rowRefs.current[rowIndex] = el)}
+              ref={(el) => {
+                rowRefs.current[rowIndex] = el; // Fixed: No return value
+              }}
             >
               {[...Array(7)].map((_, itemIndex) => {
-                const content = combinedItems[rowIndex * 7 + itemIndex];
+                const itemIndexInArray = rowIndex * 7 + itemIndex;
+                const content = combinedItems[itemIndexInArray];
                 return (
-                  <div key={itemIndex} className="row__item">
+                  <div key={`item-${rowIndex}-${itemIndex}`} className="row__item">
                     <div className="row__item-inner" style={{ backgroundColor: "#111" }}>
-                      {typeof content === "string" && content.startsWith("http") ? (
-                        <div
-                          className="row__item-img"
-                          style={{
-                            backgroundImage: `url(${content})`,
-                          }}
-                        ></div>
-                      ) : (
-                        <div className="row__item-content">{content}</div>
-                      )}
+                      {content}
                     </div>
                   </div>
                 );

@@ -2,7 +2,6 @@ import { StrictMode } from 'react';
 import { createRoot } from 'react-dom/client';
 import './styles/index.css';
 import { createBrowserRouter, RouterProvider } from "react-router-dom";
-import Index from './pages/index.tsx';
 import Collection from './pages/collection.tsx';
 import App from './App.tsx';
 
