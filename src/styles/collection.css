@@ -1,0 +1,122 @@
+
+.collection-container{
+    display: flex;
+    position: relative;
+    flex-direction: column;
+    min-height: 100vh; /* ป้องกันไม่ให้ container เล็กเกินไป */
+    overflow-y: auto; /* ถ้าจำเป็นต้องเลื่อน */
+}
+.collection-hero-section img{
+    width: 100vw;
+    height: 100vh;
+    position: relative;
+}
+.collection-hero-section {
+  position: relative; /* เพื่อให้ absolute ด้านในทำงานได้ดี */
+}
+.collection-hero-title {
+    display: flex;
+    flex-direction: column;
+    justify-content: start; 
+    position: absolute;
+    top: 0; 
+    left: 0;
+    width: 100vw;
+    height: 100vh;
+    background-color: rgba(5, 5, 5, 0.7);
+    color: white; /* Ensure text is visible */
+}
+.collection-hero-content{
+   margin: 18rem 7rem;
+
+}
+.collection-hero-title p {
+    max-width: 500px; 
+    line-height: 1.6;
+    color: white; 
+}
+
+
+/*Play button*/
+.collection-btn{
+    display: flex;
+}
+.Btn-Container {
+    margin-top: 10px;
+    display: flex;
+    width: 170px;
+    height: fit-content;
+    background-color: #1d2129;
+    border-radius: 40px;
+    box-shadow: 0px 5px 10px #bebebe;
+    justify-content: space-between;
+    align-items: center;
+    border: none;
+    cursor: pointer;
+  }
+  .icon-Container {
+    width: 45px;
+    height: 45px;
+    background-color: #ff0000;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 50%;
+    border: 3px solid #ffffff;
+  }
+  .text {
+    width: calc(170px - 45px);
+    height: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: white;
+    font-size: 1.1em;
+    letter-spacing: 1.2px;
+  }
+  .icon-Container svg {
+    transition-duration: 1.5s;
+  }
+  .Btn-Container:hover .icon-Container svg {
+    transition-duration: 1.5s;
+    animation: arrow 1s linear infinite;
+  }
+  @keyframes arrow {
+    0% {
+      opacity: 0;
+      margin-left: 0px;
+    }
+    100% {
+      opacity: 1;
+      margin-left: 10px;
+    }
+  }
+  .recommend-container {
+    width: 90%;
+    margin: auto;
+    padding: 20px 0;
+  }
+  
+  .movie-slide {
+    position: relative;
+    padding: 10px;
+  }
+  
+  .movie-slide img {
+    width: 100%;
+    border-radius: 10px;
+    transition: transform 0.3s ease-in-out;
+  }
+  
+  .movie-slide:hover img {
+    transform: scale(1.1);
+  }
+  
+  .movie-title {
+    text-align: center;
+    margin-top: 8px;
+    font-size: 16px;
+    font-weight: bold;
+    color: white;
+  }
+  
