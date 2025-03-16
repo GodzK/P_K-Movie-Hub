@@ -46,7 +46,7 @@ const items: JSX.Element[] = [
 
 function Index() {
   return (
-    <div className="container">
+    <div className="home-container">
       <div>
         <Background items={items} />
       </div>

@@ -1,5 +1,5 @@
 @plugin "daisyui";
-.container {
+.home-container {
   display: flex;
   width: 100vw;
   height: 100vh;
