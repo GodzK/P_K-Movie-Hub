@@ -1,54 +1,43 @@
-# React + TypeScript + Vite
+# P_K-Movie-Hub
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+A personal movie/series collection web application built with React, TypeScript, and Vite. Features an animated background grid using GSAP for a dynamic user experience.
 
-Currently, two official plugins are available:
+## Table of Contents
+- [Project Overview](#project-overview)
+- [Features](#features)
+- [Tech Stack](#tech-stack)
+- [Installation](#installation)
+- [Usage](#usage)
+- [Project Structure](#project-structure)
+- [Available Scripts](#available-scripts)
+- [Contributing](#contributing)
+- [License](#license)
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react/README.md) uses [Babel](https://babeljs.io/) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+## Project Overview
+P_K-Movie-Hub is a web application designed to display a curated collection of movies or series in an interactive and visually appealing manner. The app features a grid-based background with smooth animations powered by GSAP, showcasing images of various movies or series. Users can navigate to a detailed collection page to explore more.
 
-## Expanding the ESLint configuration
+The project is built using modern web technologies like React, TypeScript, and Vite for fast development and optimized builds.
 
-If you are developing a production application, we recommend updating the configuration to enable type-aware lint rules:
+## Features
+- **Dynamic Background Animation**: A grid of movie/series images with smooth scrolling animations using GSAP.
+- **Responsive Design**: Adapts to different screen sizes for a consistent user experience.
+- **TypeScript Support**: Ensures type safety and better developer experience.
+- **Fast Development with Vite**: Leverages Vite for lightning-fast builds and hot module replacement.
+- **Customizable Grid**: Easily swap out images or adjust the grid layout to showcase different collections.
+- **Interactive UI**: Includes buttons and navigation links for exploring the collection.
 
-```js
-export default tseslint.config({
-  extends: [
-    // Remove ...tseslint.configs.recommended and replace with this
-    ...tseslint.configs.recommendedTypeChecked,
-    // Alternatively, use this for stricter rules
-    ...tseslint.configs.strictTypeChecked,
-    // Optionally, add this for stylistic rules
-    ...tseslint.configs.stylisticTypeChecked,
-  ],
-  languageOptions: {
-    // other options...
-    parserOptions: {
-      project: ['./tsconfig.node.json', './tsconfig.app.json'],
-      tsconfigRootDir: import.meta.dirname,
-    },
-  },
-})
-```
+## Tech Stack
+- **React**: Frontend library for building user interfaces.
+- **TypeScript**: Adds static types to JavaScript for improved code quality.
+- **Vite**: Next-generation frontend tooling for fast builds and development.
+- **GSAP**: Animation library for creating smooth and performant animations.
+- **React Router**: For navigation between different pages (e.g., `/collection`).
+- **CSS**: Custom styles for layout and design.
 
-You can also install [eslint-plugin-react-x](https://github.com/Rel1cx/eslint-react/tree/main/packages/plugins/eslint-plugin-react-x) and [eslint-plugin-react-dom](https://github.com/Rel1cx/eslint-react/tree/main/packages/plugins/eslint-plugin-react-dom) for React-specific lint rules:
+## Installation
+Follow these steps to set up the project locally:
 
-```js
-// eslint.config.js
-import reactX from 'eslint-plugin-react-x'
-import reactDom from 'eslint-plugin-react-dom'
-
-export default tseslint.config({
-  plugins: {
-    // Add the react-x and react-dom plugins
-    'react-x': reactX,
-    'react-dom': reactDom,
-  },
-  rules: {
-    // other rules...
-    // Enable its recommended typescript rules
-    ...reactX.configs['recommended-typescript'].rules,
-    ...reactDom.configs.recommended.rules,
-  },
-})
-```
+1. **Clone the repository**:
+   ```bash
+   git clone https://github.com/GodzK/P_K-Movie-Hub.git
+   cd P_K-Movie-Hub
