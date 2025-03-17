@@ -47,19 +47,19 @@ const Background: React.FC<BackgroundProps> = ({
           duration: baseDuration + speeds[index % speeds.length],
           ease: "linear",
           repeat: -1,
-          yoyo: true, // Moves back and forth
+          yoyo: true, 
         });
       }
       return null;
     });
 
-    // Cleanup GSAP animations on unmount
+
     return () => {
       animations.forEach((animation) => {
         if (animation) animation.kill();
       });
     };
-  }, []); // Empty dependency array since this runs once on mount
+  }, []); 
 
   return (
     <div className="noscroll loading" ref={gridRef}>
@@ -75,7 +75,7 @@ const Background: React.FC<BackgroundProps> = ({
               key={`row-${rowIndex}`}
               className="row"
               ref={(el) => {
-                rowRefs.current[rowIndex] = el; // Fixed: No return value
+                rowRefs.current[rowIndex] = el; 
               }}
             >
               {[...Array(7)].map((_, itemIndex) => {

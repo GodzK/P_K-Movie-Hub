@@ -3,31 +3,39 @@
     display: flex;
     position: relative;
     flex-direction: column;
-    min-height: 100vh; /* ป้องกันไม่ให้ container เล็กเกินไป */
-    overflow-y: auto; /* ถ้าจำเป็นต้องเลื่อน */
+    min-height: 100vh; 
+    overflow-y: auto; 
 }
-.collection-hero-section img{
-    width: 100vw;
-    height: 100vh;
-    position: relative;
-}
-.collection-hero-section {
-  position: relative; /* เพื่อให้ absolute ด้านในทำงานได้ดี */
+.collection-hero-section img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover; /* ทำให้ภาพไม่ยืด แต่ครอบคลุมทั้งพื้นที่ */
+  object-position: center;/* Ensure ว่าภาพอยู่ตรงกลาง*/
+  position: relative;
 }
 .collection-hero-title {
-    display: flex;
-    flex-direction: column;
-    justify-content: start; 
-    position: absolute;
-    top: 0; 
-    left: 0;
-    width: 100vw;
-    height: 100vh;
-    background-color: rgba(5, 5, 5, 0.7);
-    color: white; /* Ensure text is visible */
+  display: flex;
+  flex-direction: column;
+  justify-content: start; 
+  position: absolute;
+  top: 0; 
+  left: 0;
+  width: 100vw;
+  height: 100vh;
+  background-color: rgba(5, 5, 5, 0.7);
+  color: white;
 }
+
+.collection-hero-section {
+  position: relative;
+  width: 100%;
+  height: 70vh; /* ลดความสูงลงเพื่อให้เหมาะกับทุกจอ */
+  overflow: hidden;
+}
+
 .collection-hero-content{
-   margin: 18rem 7rem;
+   margin: 15rem 7rem;
+   max-width: 90%;
 
 }
 .collection-hero-title p {
@@ -119,4 +127,43 @@
     font-weight: bold;
     color: white;
   }
-  
+
+.button {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 10px 15px;
+  gap: 15px;
+  background-color: #ff0000;
+  outline: 3px #f9fdff solid;
+  outline-offset: -3px;
+  border-radius: 5px;
+  border: none;
+  cursor: pointer;
+  transition: 400ms;
+  z-index: 1000;
+  margin-top: 1%;
+}
+
+.button .text {
+  color: white;
+  font-weight: 700;
+  font-size: 1em;
+  transition: 400ms;
+}
+
+.button svg path {
+  transition: 400ms;
+}
+
+.button:hover {
+  background-color: transparent;
+}
+
+.button:hover .text {
+  color: #007ACC;
+}
+
+.button:hover svg path {
+  fill: #007ACC;
+}

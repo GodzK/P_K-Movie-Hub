@@ -1,0 +1,103 @@
+.modal-overlay {
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: rgba(0, 0, 0, 0.85);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    z-index: 1000;
+  }
+  
+  .modal-content {
+    position: relative;
+    width: 100%;
+    max-width: 850px;
+    background: #181818;
+    border-radius: 8px;
+    overflow: hidden;
+  }
+  
+  .close-button {
+    position: absolute;
+    top: 16px;
+    right: 16px;
+    background: none;
+    border: none;
+    cursor: pointer;
+    z-index: 10;
+  }
+  
+  .modal-image {
+    position: relative;
+    width: 100%;
+    height: 450px;
+  }
+  
+  .modal-image img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+  }
+  
+  .image-gradient {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    height: 50%;
+    background: linear-gradient(to top, #181818, transparent);
+  }
+  
+  .play-button-overlay {
+    position: absolute;
+    bottom: 20px;
+    left: 20px;
+  }
+  
+  .play-button {
+    display: flex;
+    align-items: center;
+    background: white;
+    border: none;
+    border-radius: 4px;
+    padding: 8px 16px;
+    cursor: pointer;
+    font-size: 16px;
+    font-weight: 500;
+    color: black;
+  }
+  
+  .play-button svg {
+    margin-right: 8px;
+  }
+  
+  .modal-details {
+    padding: 20px;
+    color: white;
+  }
+  
+  .modal-meta {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    margin-bottom: 16px;
+  }
+  
+  .match-score {
+    color: #46d369;
+    font-weight: bold;
+  }
+  
+  .year, .maturity, .duration, .quality {
+    color: #b3b3b3;
+    font-size: 14px;
+  }
+  
+  .modal-description {
+    font-size: 14px;
+    line-height: 1.5;
+    color: #d2d2d2;
+  }
