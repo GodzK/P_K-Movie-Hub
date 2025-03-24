@@ -3,10 +3,11 @@ import "../styles/modal.css";
 
 interface ModalProps {
   image: string;
+  desc : string | null;
   onClose: () => void;
 }
 
-const Modal: React.FC<ModalProps> = ({ image, onClose }) => {
+const Modal: React.FC<ModalProps> = ({ image,desc, onClose }) => {
   const handleOverlayClick = (e: React.MouseEvent<HTMLDivElement>) => {
     if (e.target === e.currentTarget) {
       onClose();
@@ -56,8 +57,7 @@ const Modal: React.FC<ModalProps> = ({ image, onClose }) => {
             <span className="quality">HD</span>
           </div>
           <p className="modal-description">
-            A thief who steals corporate secrets through dream infiltration
-            technology...
+            {desc}
           </p>
         </div>
       </div>

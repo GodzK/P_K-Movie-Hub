@@ -2,11 +2,8 @@ import { Link } from "react-router-dom";
 import { JSX } from "react";
 import "../styles/Nav.css";
 
-interface NavbarProps {
-  onSignInClick: () => void;
-}
 
-export default function Navbar({ onSignInClick }: NavbarProps): JSX.Element {
+export default function Navbar(): JSX.Element {
   return (
     <nav
       className="navbar bg-transparent text-white p-4 flex items-center justify-between"
@@ -18,7 +15,6 @@ export default function Navbar({ onSignInClick }: NavbarProps): JSX.Element {
       <div className="flex items-center gap-4">
         <button
           className="bg-red-800 px-3 py-1 hover:bg-red-900"
-          onClick={onSignInClick}
         >
           Sign In
         </button>

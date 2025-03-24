@@ -6,12 +6,12 @@ import Login from "./components/Login";
 function App() {
   const [isLoginModalOpen, setIsLoginModalOpen] = useState<boolean>(false);
 
-  const openLoginModal = (): void => setIsLoginModalOpen(true);
+  
   const closeLoginModal = (): void => setIsLoginModalOpen(false);
 
   return (
     <div className="div-container">
-      <Navbar onSignInClick={openLoginModal} />
+      <Navbar  />
       <Homepage />
       {isLoginModalOpen && <Login onClose={closeLoginModal} />}
     </div>
