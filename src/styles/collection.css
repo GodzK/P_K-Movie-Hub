@@ -167,3 +167,9 @@
 .button:hover svg path {
   fill: #007ACC;
 }
+
+@media (max-width: 768px) {
+  .collection-hero-content p{
+    display: none;
+  }
+}
