@@ -2,46 +2,53 @@ import "../styles/Home.css";
 import Background from "../components/Background";
 import Twinkling from "../../src/images/twinkling-watermelon.png";
 import Undercover from "../../src/images/undercover.jpg";
-import qot from "../../src/images/qot.jpg";
+import Qot from "../../src/images/qot.jpg";
 import lovelyrunner from "../../src/images/lovelyrunner.jpg";
 import startup from "../../src/images/startup.jpg";
 import tangurine from "../../src/images/tangurine.jpg";
 import topgun from "../../src/images/topgun.jpg";
 import vagabond from "../../src/images/vagabond.jpg";
 import twenty from "../../src/images/20cen.jpg";
-import { JSX } from "react";
 import nextdoor from "../../src/images/nextdoor.jpg";
+import hyperknife from "../../src/images/hyperknife.jpg";
+import friendlyrivalry from "../../src/images/friendly-rivalry.jpg";
+import mydearestnemesis from "../../src/images/dearest-nemesis.jpg";
+import residentplaybook from "../../src/images/resident-playbook.png";
+import weakhero from "../../src/images/weakhero.jpg";
+import weakhero2 from "../../src/images/weakhero2.png";
+import moving from "../../src/images/moving.jpg";
+import { JSX } from "react";
 import { Link } from "react-router-dom";
 
 const items: JSX.Element[] = [
-  <img key="lovelyrunner-1" src={lovelyrunner} alt="Lovely Runner Image" />,
-  <img key="undercover-1" src={Undercover} alt="Undercover Image" />,
-  <img key="nextdoor-1" src={nextdoor} alt="Next Door Image" />,
-  <img key="topgun-1" src={topgun} alt="Top Gun Image" />,
-  <img key="undercover-2" src={Undercover} alt="Undercover Image" />,
-  <img key="undercover-3" src={Undercover} alt="Undercover Image" />,
-  <img key="nextdoor-2" src={nextdoor} alt="Next Door Image" />,
-  <img key="undercover-4" src={Undercover} alt="Undercover Image" />,
-  <img key="undercover-5" src={Undercover} alt="Undercover Image" />,
-  <img key="lovelyrunner-2" src={lovelyrunner} alt="Lovely Runner Image" />,
-  <img key="tangurine-1" src={tangurine} alt="Tangurine Image" />,
-  <img key="startup-1" src={startup} alt="Startup Image" />,
-  <img key="topgun-2" src={topgun} alt="Top Gun Image" />,
-  <img key="vagabond-1" src={vagabond} alt="Vagabond Image" />,
-  <img key="lovelyrunner-3" src={lovelyrunner} alt="Lovely Runner Image" />,
-  <img key="undercover-6" src={Undercover} alt="Undercover Image" />,
-  <img key="twinkling-1" src={Twinkling} alt="Twinkling Watermelon" />,
-  <img key="qot-1" src={qot} alt="Quote Image" />,
-  <img key="twenty-1" src={twenty} alt="20th Century Image" />,
-  <img key="nextdoor-3" src={nextdoor} alt="Next Door Image" />,
-  <img key="nextdoor-4" src={nextdoor} alt="Next Door Image" />,
-  <img key="undercover-7" src={Undercover} alt="Undercover Image" />,
-  <img key="qot-2" src={qot} alt="Quote Image" />,
-  <img key="undercover-8" src={Undercover} alt="Undercover Image" />,
-  <img key="qot-3" src={qot} alt="Quote Image" />,
-  <img key="undercover-9" src={Undercover} alt="Undercover Image" />,
-  <img key="nextdoor-5" src={nextdoor} alt="Next Door Image" />,
-  <img key="undercover-10" src={Undercover} alt="Undercover Image" />,
+<img key="vagabond-1" src={vagabond} alt="Vagabond Image" />,
+  <img key="twinkling-watermelon-1" src={Twinkling} alt="Twinkling Watermelon Image" />,
+  <img key="resident-playbook-1" src={residentplaybook} alt="Resident Playbook Image" />,
+  <img key="queen-of-tears-1" src={Qot} alt="Queen of Tears Image" />,
+  <img key="tangerine-1" src={tangurine} alt="Tangerine Image" />,
+  <img key="weak-hero-class-2-1" src={weakhero2} alt="Weak Hero Class 2 Image" />,
+  <img key="next-door-1" src={nextdoor} alt="Next Door Image" />,
+  <img key="lovely-runner-1" src={lovelyrunner} alt="Lovely Runner Image" />,
+  <img key="my-dearest-nemesis-1" src={mydearestnemesis} alt="My Dearest Nemesis Image" />,
+  <img key="hyper-knife-1" src={hyperknife} alt="Hyper Knife Image" />,
+  <img key="start-up-1" src={startup} alt="Start-Up Image" />,
+  <img key="friendly-rivalry-1" src={friendlyrivalry} alt="Friendly Rivalry Image" />,
+  <img key="20th-century-girl-1" src={twenty} alt="20th Century Girl Image" />,
+  <img key="undercover-high-school-1" src={Undercover} alt="Undercover High School Image" />,
+  <img key="top-gun-1" src={topgun} alt="Top Gun Image" />,
+  <img key="moving-1" src={moving} alt="Moving Image" />,
+  <img key="weak-hero-class-1-1" src={weakhero} alt="Weak Hero Class 1 Image" />,
+  <img key="twinkling-watermelon-2" src={Twinkling} alt="Twinkling Watermelon Image" />,
+  <img key="resident-playbook-2" src={residentplaybook} alt="Resident Playbook Image" />,
+  <img key="vagabond-2" src={vagabond} alt="Vagabond Image" />,
+  <img key="queen-of-tears-2" src={Qot} alt="Queen of Tears Image" />,
+  <img key="moving-2" src={moving} alt="Moving Image" />,
+  <img key="tangerine-2" src={tangurine} alt="Tangerine Image" />,
+  <img key="lovely-runner-2" src={lovelyrunner} alt="Lovely Runner Image" />,
+  <img key="next-door-2" src={nextdoor} alt="Next Door Image" />,
+  <img key="hyper-knife-2" src={hyperknife} alt="Hyper Knife Image" />,
+  <img key="start-up-2" src={startup} alt="Start-Up Image" />,
+  <img key="20th-century-girl-2" src={twenty} alt="20th Century Girl Image" />,
 ];
 
 function Index() {
