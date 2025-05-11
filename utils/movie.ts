@@ -11,31 +11,120 @@ import friendlyrivalry from "../src/images/friendly-rivalry.jpg";
 import mydearestnemesis from "../src/images/dearest-nemesis.jpg";
 import Twinkling from "../src/images/twinkling-watermelon.png";
 import Undercover from "../src/images/undercover.jpg";
-
+import residentplaybook from "../src/images/resident-playbook.png"
+import weakhero from "../src/images/weakhero.jpg"
+import weakhero2 from "../src/images/weakhero2.png"
+import moving from "../src/images/moving.jpg"
 const movie = [
   {
     src: Twinkling,
     title: "Twinkling Watermelon",
     hot: "true",
     description:
-      "A heartwarming tale of a young musician who time-travels to the 90s to reconnect with his estranged father through music and love.",
+      "เปฌนเรื่องที่โดนเเนะนำจากyoutube ดูเล่นๆ เเต่โดนนางเอกตก โคตรสวย สวยสัสๆ เเละplot เเม่งก็ไม่ค่อยได้ดู ย้อนเวลากลับไปช่วย คนในอดีต มันสนุกมาก เเต่ละฝั่งทั้งพ่อเเม่พระเอกที่หูหนวกเเละได้ย้อนกลับไปรู้ว่าพ่อเป็นคนปกติ รวมถึงเเม่อันนี้ตัวเด็ด เป็นเรื่องเเรกเลยที่นางเอกกับนางรองหน้าตาไม่ต่างกันเลย โคตรจะฟิน เเม่ง สุดยอดที่สุดละทั้งเนื้อเรื่องเเละความฟิน",
     category: "Romance",
+    rank: 1,
+    ratings: { excitement: 9, romance: 9.8, emotion: 10, overall: 10 },
   },
   {
-    src: lovelyrunner,
-    title: "Lovely Runner",
+    src: Qot,
+    title: "Queen of Tears",
     hot: "true",
     description:
-      "A romantic comedy about a woman who keeps running into her charming neighbor, sparking an unexpected love story.",
-    category: "Romance",
+      "ดูจบหลังจากเพิ่งเลิกกับเเฟนคนเเรก เเม่งทำให้โคตรเศร้า เเม่งซึมจากqueen of tear effectไปเดือนนึงเต็มๆ กูเกือบเป็นซึ่มเศร้าจริง เเม่งโคตรดิ่ง กูโคตรทรมาณ เเต่ตอนดูคือ กอไปหาคิมจีวอนกับพระเอก ตลอดเพราะเคมีเข้ากันสัสๆ เข้ากันเเบบ สุดยอดอ่ะ ตอนดูจบคือไม่คิดว่าจะมีเรื่องไหนเเซงละ ละสุดท้าย ก็มีเรื่องที่ทำให้มันมาอยู่อันดับที่สอง",
+    category: "Drama",
+    rank: 2,
+    ratings: { excitement: 8.0, romance: 10, emotion: 10, overall: 9.9 },
+  },
+  {
+    src: moving,
+    title: "Moving",
+    hot: "true",
+    description:
+      "ตอนเเรก คือ มาดูเพราะ โกยูจองเลย โคตรสวยเพราะดูมาจากresident paybook เเต่พอเริ่มดู มันเหมือนกับว่าได้โกยูจองช่วยไว้นะ ไม่งั้นคงไม่ได้ดู โกยูจองมาช่วยพาไปถึง8ตอนเเรกมั้งเเบบ เซอร์วิสความสวยชิบหาย โคตรฟิน ดูไปเพลินๆ เเละก็มีเล่าเรื่องตัวละครเเต่ละตัวหลังจากนั้น ซึ่งช่วงเเรกก็ไม่เข้าใจว่าเล่าไปทำไม ทั้งพ่อเเม่ พระเอก,นางเอกโดยเฉพาะpart พ่อเเม่พระเอก เเม่งทดเเทนการหายไปของโกยูจองได้เเบบไม่มีข้อกังขา มันสามารถสร้างได้อีกเรื่องเลยนะ โคตรดีอ่ะ รักต้องห้าม เเละ ไอตัวสายฟ้า เเต่พอดูไปเรื่อยๆเข้าใจละ เเม่งทำให้โคตรอิน พ่อเเม่พระเอกก็สวยชิบหาย เนื้อเรื่องก็เเบบน่าดูตลอดเวลา ยิ่งตอนที่มีพ่อที่เป็นบ้ามาช่วยลูกหัวหน้าห้อง เเม่งโคตรสุด โคตรattacker เรื่องนี้โคตรดี ดีทุกอย่าง ยังตรึงใจอยู่เลย เป็นเรื่องเเรกๆที่เก็บได้ทุกdetail ทุกปมที่ทิ้งไว้ จำได้หมดเลย ชอบจริงๆ",
+    category: "Action",
+    rank: 3,
+    ratings: { excitement: 10, romance: 9.5, emotion: 9, overall: 9.9 },
   },
   {
     src: twenty,
     title: "20th Century Girl",
     hot: "false",
     description:
-      "A nostalgic romance set in the late 90s, following a teenage girl’s first love and the bittersweet memories it leaves behind.",
+      "เป็นหนังเรื่องที่ดูหลังจาก ดูlovely runnerจบเเละมาเห็น เป็นหนังที่สะดุดตามาก เพราะดาราbigทั้งdemonเเละ  lovely runnerมารวมกัน มันจะมันขนาดไหน เเละก็สมคำร่ำลือ โคตรเศร้าโคตรมัน มันสนุกไปหมด ภายในสองชั่วโมงพาเราไปรู้จักกับพระนาง ความเข้าใจผิด เเละ รักกันโดยไม่รู้ว่าจะไปเเย่งของเพื่อน เเต่สุดท้ายรักกันนะ เเต่พระเอกตาย อันนี้เเม่งทำดิ่ง เเม่งโคตรหักมุมอ่ะ เเม่งพอดูจบกูยืนตบมือจริงๆนะ",
     category: "Romance",
+    rank: 4,
+    ratings: { excitement: 8.3, romance: 8.5, emotion: 10, overall: 9.5 },
+  },
+  {
+    src: topgun,
+    title: "Top Gun",
+    hot: "false",
+    description:
+      "เป็นหนังที่ดีที่สุดที่คิดว่าไม่มีอะไรชนะมันได้ด้านเนื้อเรื่องละนะ มันตราตรึงมาก ไม่มีอะไรอธิบายเยอะ มันสนุกจริงๆ",
+    category: "Action",
+    rank: 5,
+    ratings: { excitement: 8.5, romance: 5.0, emotion: 10, overall: 9.3 },
+  },
+  {
+    src: hyperknife,
+    title: "Hyper Knife",
+    hot: "false",
+    description:
+      "หมอสาว ตอนเเรกกะจะไม่ดูเพราะ คนเเก่กับนางเอกที่ไม่ค่อสะดุดตา เเต่พอดูดีๆ นางเอกเเม่งจิตๆ เเต่เสือกสวย ตัวเล็กๆ เเล้วก็มีdramaทำให้มันสนุก เเละอย่างที่บอกชอบตัวละครเก่ง นางเอกเเม่งก็โคตรเก่ง เก่งกว่าอาจารย์มันอีก เนื้อเรื่องก็น่าติดตาม ทำไมมันโกรธกันได้ขนาดนั้น อันนี้ดีจริงๆ ลองดู",
+    category: "Thriller",
+    rank: 6,
+    ratings: { excitement: 9.0, romance: 8.0, emotion: 7.0, overall: 9 },
+  },
+  {
+    src: residentplaybook,
+    title: "Resident Playbook",
+    hot: "false",
+    description:
+      "เป็นเรื่องเเรกที่bookวันมาของมันเป็นเดือนๆ วันที่15เมษายน ละเเม่งก็สมคำร่ำลือ ไม่เคยดูโกยูจองซักเรื่อง เเต่พอเห็นปุ๊ป รู้เลยทำไมเค้าถึงร่ำลือกันว่าสวยนักหนา มันโคตรจะสวยเลยสัส เนื้อเรื่องก็โอเค เเต่ละตัวละครมีบทที่น่าสนใจ คิมซาบุก็ถูกใจ พโยนัมกยอง มั้งนะ ก็สวยโอเค เเละก็จิ้นกันได้น่าสนใจดี",
+    category: "Drama",
+    rank: 7,
+    ratings: { excitement: 8, romance: 8.8, emotion: 8.5 , overall: 8.5 },
+  },
+ {
+    src: weakhero,
+    title: "Weak hero class 1",
+    hot: "false",
+    description:
+      "ทนกระเเสไม่ไหว ภาคสองเเม่งโคตรดัง เเล้วพอดูตัวอย่าง มันมีระดับความเก่งที่ชัดมาก ชอบดูหนังที่มีคนเก่งเป็นrank มันดูน่าสนใจ เเละชอบทีมีคนเก่งเเบบเวอร์ๆอยู่ฝั่งพระเอก ฟิว solo levelingเเล้วคือพึ่งดูsolo leveling จบ เเล้วมาต่อ โคตรจะมัน มันสัสๆ ซูโฮเเม่งโคตรเท่ โคตรเเบกเรื่องนี้ ",
+    category: "Drama",
+    rank: 8,
+    ratings: { excitement: 10, romance: 5, emotion: 8.5 , overall: 8.0 },
+  },
+  {
+    src: lovelyrunner,
+    title: "Lovely Runner",
+    hot: "false",
+    description:
+      "ถ้ามันสนุกเหมือน3ตอนเเรกนะ มึงขึ้นไปอยู่กับwatermelonละสัส มึงdropเเบบน่าใจหายมาก ช่วงเเรกคือเวอณืจัด นางเอกเป้นfc เเละพระเอกตาย เลยย้อนเวลากลับไป สรุปพระเอกเเม่งเเอบชอบนางเอกมาตลอด ช่วยชีวืต เเบบบทโคตรเทพบุตร เเละก็นางเอกก็ควายได้ทุกตอน ก็เลยเริ่มเบื่อ เลยลงมาถึงอันดับนี้  พระนางทำให้เบื่อไวไปมาก",
+    category: "Romance",
+    rank: 9,
+    ratings: { excitement: 8, romance: 8.6, emotion: 7, overall: 7.5 },
+  },
+  {
+    src: Undercover,
+    title: "Undercover High School",
+    hot: "false",
+    description:
+      "ตอนเเรกสนุกนะ สนุกสัสๆ อันดับโคตรสูง เเต่พอดูhyper knifeเเล้วมาดูอ่ะ มันคนละชั้นจริงๆนะ มันชัดเจนมาก เลยเริ่มรู้ระดับหนังก็ตอนนั้นเเหละ ดูซีนอาจารมณ์มา เเละมาดูตลกโปกฮามันชัดไป เเต่ความฟิน ได้อยู่ เเละก็ตอนจบพีคสัสๆ",
+    category: "Comedy",
+    rank: 10,
+    ratings: { excitement: 7, romance: 8.5, emotion: 7.5, overall: 7.3 },
+  },
+  {
+    src: friendlyrivalry,
+    title: "Friendly Rivalry",
+    hot: "false",
+    description:
+      "ดุเอาความฟิน พระนาง เเละก็เพื่อนพระเอก โคตรสวย สวยเเบบสัสๆ อนาคตไกลเเน่ ส่วนเนื้อเรื่องก็averageจากwebtoon ไม่ได้wowอะไร มีเเค่มาดูความสวยของตัวละคร เเต่เเค่นี่ขนาดมีเเค่ความสวยนะ เเสดงว่าเเม่งสวยจริงๆเพื่อน",
+    category: "Thriller",
+    rank: 11,
+    ratings: { excitement: 7.0, romance: 7.5, emotion: 7.0, overall: 6.8 },
   },
   {
     src: mydearestnemesis,
@@ -44,16 +133,7 @@ const movie = [
     description:
       "A romantic enemies-to-lovers tale where two coworkers clash daily, only to discover a deeper connection beneath the tension.",
     category: "Romance",
-  },
-
-  // Comedy
-  {
-    src: Undercover,
-    title: "Undercover",
-    hot: "true",
-    description:
-      "An intense thriller about a secret agent infiltrating a criminal organization, risking everything for justice.",
-    category: "Comedy",
+    ratings: { excitement: 5, romance: 8.0, emotion: 7, overall: 7.0 },
   },
   {
     src: nextdoor,
@@ -62,36 +142,7 @@ const movie = [
     description:
       "A quirky drama about neighbors whose lives intertwine unexpectedly, revealing secrets and building unlikely bonds.",
     category: "Comedy",
-  },
-//Thriller
-  {
-    src: hyperknife,
-    title: "Hyper Knife",
-    hot: "false",
-    description:
-      "A dark psychological thriller about a genius surgeon with a hidden past, cutting through lies and lives with precision.",
-    category: "Thriller",
-  }, 
-  {
-    src: friendlyrivalry,
-    title: "Friendly Rivalry",
-    hot: "false",
-    description:
-      "A lighthearted story of two best friends turned rivals in a cooking competition, blending humor and heartfelt moments.",
-    category: "Thriller",
-  },
-
- 
-
-
-  // Drama
-  {
-    src: Qot,
-    title: "Queen of Tears",
-    hot: "true",
-    description:
-      "A dramatic story of a chaebol heiress facing family betrayal and a tragic love story that brings tears and redemption.",
-    category: "Drama",
+    ratings: { excitement: 7.5, romance: 8, emotion: 8, overall: 6.8 },
   },
   {
     src: startup,
@@ -100,6 +151,7 @@ const movie = [
     description:
       "A journey of young entrepreneurs chasing their dreams in the competitive world of tech startups, filled with ambition and romance.",
     category: "Drama",
+    ratings: { excitement: 10, romance: 9, emotion: 9, overall: 7.2 },
   },
   {
     src: tangurine,
@@ -108,16 +160,7 @@ const movie = [
     description:
       "A bittersweet coming-of-age story set in a small town, where a girl discovers friendship and loss under tangerine trees.",
     category: "Drama",
-  },
-
-  // Action
-  {
-    src: topgun,
-    title: "Top Gun",
-    hot: "false",
-    description:
-      "An action-packed tale of elite fighter pilots pushing their limits in the sky, with rivalry, courage, and high stakes.",
-    category: "Action",
+    ratings: { excitement: 7, romance: 10, emotion: 10, overall: 7.0 },
   },
   {
     src: vagabond,
@@ -126,6 +169,17 @@ const movie = [
     description:
       "A gripping mystery of a stuntman uncovering a conspiracy after a plane crash, leading him on a dangerous quest for truth.",
     category: "Action",
+    ratings: { excitement: 9, romance: 6.5, emotion: 6, overall: 7.3 },
+  },
+   {
+    src: weakhero2,
+    title: "Weak hero class 2",
+    hot: "false",
+    description:
+      "สิ่งที่ชอบภาคนี้มีเเค่เรื่องการเเบ่งrankเเหละ เเละความอินจากภาคที่เเล้ว นาเเบคติน เเละก้ไอเเว่นtangurine โคตรเท่ ทำได้น้อยกว่าภาค1 เเต่ยังคงมาตรฐานความสนุกไว้ได้โอเค เเต่จบควายไปหน่อย รุมนาเเบคจิน เเบบหมาหมู่ เเต่ช่างมันบาคุเท่ดี ",
+    category: "Drama",
+    rank: 8.5,
+    ratings: { excitement: 10, romance: 4, emotion: 8 , overall: 7.3 },
   },
 ];
 

@@ -8,6 +8,7 @@ import "slick-carousel/slick/slick-theme.css";
 import Loading from "./loading";
 import Modal from "../components/Modal";
 import { useEffect, useState } from "react";
+import TopTier from "./toptier.tsx";
 
 function Collection() {
   const [loading, setLoading] = useState(true);
@@ -125,6 +126,7 @@ function Collection() {
           )}
         </>
       )}
+      <TopTier/>
     </div>
   );
 }
