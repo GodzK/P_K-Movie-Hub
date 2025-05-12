@@ -1,20 +1,20 @@
-@import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700;800&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;700;800&display=swap');
+
+
 
 .toptier-container {
-  display: flex;
-  flex-direction: column;
   min-height: 100vh;
-  background: linear-gradient(180deg, #0a0a0a, #1a1a1a);
-  font-family: 'Inter', sans-serif;
+  font-family: 'Poppins', sans-serif;
   color: #ffffff;
   padding: 2rem 1rem;
-
+  display: flex;
+  justify-content: center;
+  overflow-y: auto; 
 }
 
 .tier-section {
   width: 100%;
   max-width: 1200px;
-  margin: 0 auto;
   padding: 3rem 0;
 }
 
@@ -23,17 +23,10 @@
   font-weight: 800;
   text-align: center;
   margin-bottom: 3rem;
-  letter-spacing: -0.5px;
-  background: linear-gradient(45deg, #ff0000, #ff6b6b);
+  background: linear-gradient(45deg, #ff0066, #ff4d4d);
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
-  text-shadow: 0 4px 20px rgba(255, 0, 0, 0.4);
-}
-
-.tier-title span {
-  color: #ffffff;
-  background: none;
-  -webkit-text-fill-color: #ffffff;
+  text-shadow: 0 4px 20px rgba(255, 0, 102, 0.4);
 }
 
 .ranking-list {
@@ -43,42 +36,35 @@
 }
 
 .ranking-card {
-  position: relative;
-  background: #1e1e1e;
+  background: rgba(30, 30, 30, 0.8);
   border-radius: 20px;
   padding: 1.5rem;
-  transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
   cursor: pointer;
   opacity: 0;
   transform: translateY(50px);
-  animation: slideIn 0.6s forwards;
-  border: 1px solid rgba(255, 0, 0, 0.2);
-
+  animation: slideIn 0.6s ease-out forwards;
+  border: 1px solid rgba(255, 0, 102, 0.2);
+  will-change: transform, opacity; /* Optimize for animations */
 }
+
+/* Staggered animation delays */
+.ranking-card:nth-child(1) { animation-delay: 0.1s; }
+.ranking-card:nth-child(2) { animation-delay: 0.2s; }
+.ranking-card:nth-child(3) { animation-delay: 0.3s; }
+.ranking-card:nth-child(4) { animation-delay: 0.4s; }
+.ranking-card:nth-child(5) { animation-delay: 0.5s; }
+.ranking-card:nth-child(6) { animation-delay: 0.6s; }
+.ranking-card:nth-child(7) { animation-delay: 0.7s; }
+.ranking-card:nth-child(8) { animation-delay: 0.8s; }
+.ranking-card:nth-child(9) { animation-delay: 0.9s; }
+.ranking-card:nth-child(10) { animation-delay: 1s; }
 
 .ranking-card:hover {
-  transform: translateY(-10px) scale(1.02);
-  box-shadow: 0 20px 40px rgba(255, 0, 0, 0.5), 0 0 20px rgba(255, 0, 0, 0.3);
-  background: linear-gradient(135deg, #252525, #2a2a2a);
-  border-color: #ff0000;
-}
-
-.ranking-card:hover .ranking-image {
-  transform: scale(1.1);
-  filter: brightness(1.2);
-}
-
-.ranking-card:hover .image-overlay {
-  background: linear-gradient(180deg, rgba(255, 0, 0, 0.2), rgba(0, 0, 0, 0.5));
-}
-
-.ranking-card:hover .rank-number {
-  color: #ff4d4d;
-  text-shadow: 0 0 10px rgba(255, 0, 0, 0.8);
-}
-
-.ranking-card:hover .movie-title {
-  color: #ff4d4d;
+  transform: translateY(-10px);
+  box-shadow: 0 10px 20px rgba(255, 0, 102, 0.2); /* Reduced shadow for performance */
+  border-color: #ff0066;
+  background: rgba(40, 40, 40, 0.9);
 }
 
 .ranking-content {
@@ -97,7 +83,12 @@
   height: 180px;
   object-fit: cover;
   border-radius: 12px;
-  transition: transform 0.4s ease, filter 0.4s ease;
+  transition: transform 0.3s ease, filter 0.3s ease;
+}
+
+.ranking-card:hover .ranking-image {
+  transform: scale(1.1);
+  filter: brightness(1.2);
 }
 
 .image-overlay {
@@ -106,9 +97,13 @@
   left: 0;
   width: 100%;
   height: 100%;
-  background: linear-gradient(180deg, transparent, rgba(0, 0, 0, 0.3));
+  background: linear-gradient(180deg, transparent, rgba(0, 0, 0, 0.5));
   border-radius: 12px;
-  transition: background 0.4s ease;
+  transition: background 0.3s ease;
+}
+
+.ranking-card:hover .image-overlay {
+  background: linear-gradient(180deg, rgba(255, 0, 102, 0.2), rgba(0, 0, 0, 0.5));
 }
 
 .ranking-info {
@@ -121,9 +116,12 @@
 .rank-number {
   font-size: 2.2rem;
   font-weight: 800;
-  color: #ff0000;
-  line-height: 1;
-  transition: color 0.4s ease, text-shadow 0.4s ease;
+  color: #ff0066;
+  transition: color 0.3s ease;
+}
+
+.ranking-card:hover .rank-number {
+  color: #ff4d4d;
 }
 
 .movie-details {
@@ -136,12 +134,15 @@
   font-size: 1.5rem;
   font-weight: 700;
   color: #ffffff;
-  line-height: 1.3;
   display: -webkit-box;
   -webkit-line-clamp: 2;
   -webkit-box-orient: vertical;
- 
-  transition: color 0.4s ease;
+  overflow: hidden;
+  transition: color 0.3s ease;
+}
+
+.ranking-card:hover .movie-title {
+  color: #ff4d4d;
 }
 
 .movie-category {
@@ -164,19 +165,51 @@
   color: #ffd700;
 }
 
-.movie-modal {
+.movie-modal-backdrop {
   position: fixed;
-  top: 50%;
-  left: 50%;
-  transform: translate(-50%, -50%);
-  width: 90%;
-  max-width: 600px;
-  background: #222;
+  inset: 0;
+  background: rgba(0, 0, 0, 0.7);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  z-index: 1000;
+  animation: fadeIn 0.3s ease;
+  overscroll-behavior: contain; /* Prevent scroll interference */
+}
+
+.movie-modal {
+  background: rgba(30, 30, 30, 0.95);
   border-radius: 20px;
-  box-shadow: 0 20px 60px rgba(0, 0, 0, 0.7);
-  
-  z-index: 10000; 
+  max-width: 600px;
+  width: 90%;
+  overflow: hidden;
+  box-shadow: 0 10px 20px rgba(0, 0, 0, 0.5); /* Reduced shadow */
   animation: modalPop 0.4s cubic-bezier(0.68, -0.55, 0.27, 1.55);
+  position: relative;
+  max-height: 90vh; /* Prevent modal from exceeding viewport */
+  overflow-y: auto;
+}
+
+.modal-close {
+  position: absolute;
+  top: 1rem;
+  right: 1rem;
+  background: rgba(0, 0, 0, 0.5);
+  color: #ffffff;
+  border: none;
+  border-radius: 50%;
+  width: 2rem;
+  height: 2rem;
+  font-size: 1.5rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+  transition: background 0.3s ease;
+}
+
+.modal-close:hover {
+  background: rgba(255, 0, 102, 0.5);
 }
 
 .modal-image {
@@ -188,10 +221,9 @@
 
 .modal-content {
   padding: 2rem;
-  background: linear-gradient(180deg, #222, #1a1a1a);
 }
 
-.modal-content h3 {
+.modal-title {
   font-size: 2rem;
   font-weight: 700;
   margin-bottom: 0.5rem;
@@ -207,7 +239,9 @@
 .modal-description {
   font-size: 1rem;
   color: #cccccc;
-  margin-bottom: 1.5rem;
+  margin-bottom: 1.5
+
+rem;
   line-height: 1.7;
   max-height: 100px;
   overflow-y: auto;
@@ -224,7 +258,7 @@
   gap: 1rem;
 }
 
-.rating-item span {
+.rating-label {
   font-size: 1rem;
   color: #ffffff;
   font-weight: 500;
@@ -234,15 +268,21 @@
 .rating-bar {
   flex: 1;
   height: 8px;
-  background: #333;
+  background: #3a3a3a;
   border-radius: 4px;
-
+  overflow: hidden;
 }
 
 .rating-bar div {
   height: 100%;
-  background: linear-gradient(90deg, #ff0000, #ff4d4d);
+  background: linear-gradient(90deg, #ff0066, #ff4d4d);
   transition: width 0.5s ease;
+}
+
+.rating-value {
+  font-size: 1rem;
+  color: #ffffff;
+  font-weight: 500;
 }
 
 @keyframes slideIn {
@@ -255,11 +295,20 @@
 @keyframes modalPop {
   from {
     opacity: 0;
-    transform: translate(-50%, -50%) scale(0.8);
+    transform: scale(0.8);
   }
   to {
     opacity: 1;
-    transform: translate(-50%, -50%) scale(1);
+    transform: scale(1);
+  }
+}
+
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
   }
 }
 
@@ -309,15 +358,11 @@
     font-size: 1.1rem;
   }
 
-  .movie-modal {
-    max-width: 90%;
-  }
-
   .modal-image {
     height: 200px;
   }
 
-  .modal-content h3 {
+  .modal-title {
     font-size: 1.6rem;
   }
 
@@ -329,10 +374,6 @@
 @media (max-width: 480px) {
   .toptier-container {
     padding: 1rem;
-  }
-
-  .ranking-card {
-    padding: 0.75rem;
   }
 
   .ranking-content {
@@ -364,7 +405,7 @@
     padding: 1.5rem;
   }
 
-  .modal-content h3 {
+  .modal-title {
     font-size: 1.4rem;
   }
 
@@ -372,8 +413,12 @@
     font-size: 0.9rem;
   }
 
-  .rating-item span {
-    min-width: 60px;
+  .rating-label,
+  .rating-value {
     font-size: 0.9rem;
+  }
+
+  .rating-label {
+    min-width: 60px;
   }
 }
