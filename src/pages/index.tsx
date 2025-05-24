@@ -17,6 +17,7 @@ import residentplaybook from "../../src/images/resident-playbook.png";
 import weakhero from "../../src/images/weakhero.jpg";
 import weakhero2 from "../../src/images/weakhero2.png";
 import moving from "../../src/images/moving.jpg";
+import alchemyofsoul from "../../src/images/alchemy.jpg";
 import { JSX } from "react";
 import { Link } from "react-router-dom";
 
@@ -40,13 +41,13 @@ const items: JSX.Element[] = [
   <img key="weak-hero-class-1-1" src={weakhero} alt="Weak Hero Class 1 Image" />,
   <img key="twinkling-watermelon-2" src={Twinkling} alt="Twinkling Watermelon Image" />,
   <img key="resident-playbook-2" src={residentplaybook} alt="Resident Playbook Image" />,
-  <img key="vagabond-2" src={vagabond} alt="Vagabond Image" />,
+   <img key="alchemy-of-soul" src={alchemyofsoul} alt="Hyper Knife Image" />,
   <img key="queen-of-tears-2" src={Qot} alt="Queen of Tears Image" />,
   <img key="moving-2" src={moving} alt="Moving Image" />,
   <img key="tangerine-2" src={tangurine} alt="Tangerine Image" />,
   <img key="lovely-runner-2" src={lovelyrunner} alt="Lovely Runner Image" />,
   <img key="next-door-2" src={nextdoor} alt="Next Door Image" />,
-  <img key="hyper-knife-2" src={hyperknife} alt="Hyper Knife Image" />,
+  <img key="alchemy-of-soul" src={alchemyofsoul} alt="Hyper Knife Image" />,
   <img key="start-up-2" src={startup} alt="Start-Up Image" />,
   <img key="20th-century-girl-2" src={twenty} alt="20th Century Girl Image" />,
 ];
