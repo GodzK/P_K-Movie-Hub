@@ -16,6 +16,7 @@ import weakhero from "../src/images/weakhero.jpg"
 import weakhero2 from "../src/images/weakhero2.png"
 import moving from "../src/images/moving.jpg"
 import alchemyofsoul from "../src/images/alchemy.jpg"
+import alchemyofsoul2 from"../src/images/alchemy2.jpg"
 const movie = [
   {
     src: Twinkling,
@@ -78,8 +79,8 @@ const movie = [
     ratings: { excitement: 8.5, romance: 6.0, emotion: 8, overall: 9.3 },
   },
   {
-  src: alchemyofsoul,
-    title: "Alchemy of Souls",
+  src: alchemyofsoul2,
+    title: "Alchemy of Souls 2",
     hot: "false",
     description:
       "'ผลงานที่จะจดจำไปตลอดชีวิต' นี่คือคำพูดของโกยูจอง หลังเล่นหนังเรื่องนี้ ภาคต่อที่ต้องดูภาคหนึ่งมาก่อน ถึงจะเข้าใจ โกยูจองมาเเทนจองโซมิน ได้อย่างดีมาก ดีที่สุดเเล้ว เนื้อเรื่องจะค่อนข้างเดาทางง่าย เเละน่าเบื่อบ้าง เพราะว่าพระเอกเก่งสุดในเรื่อง เเต่ความสนุกก็อยู่ที่พระเอกเก่งจัดนี่เเหละ เเละน่าอึดอัดคือ กว่าจะรู้ว่าร่างเก่าของนักซูคือใคร ก็ปาไปตอนที่9เเล้ว เเต่มีฉากซึมๆอยู่ เช่น ผู้นำซงริม โดนเเทง อันนั้นก็ซึมๆ เเต่โดยรวมสนุกมากๆ น่าติดตามเเทบทุกตอน ที่พูดว่าเเทบก็เพราะบางตอน มันอาจจะไม่น่าดูต่อ สามารถหยุดได้เลย เเต่สามตอนท้ายหยุดไม่ได้ ตอนจบที่ดีมากๆ ต่างจากภาคเเรกที่จบโคตรเหี้ย ผมดูทั้งเรื่องจบภายในสองวัน 25/5/2568 พน.วันสอบ ",
