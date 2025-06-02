@@ -18,6 +18,7 @@ import moving from "../src/images/moving.jpg"
 import alchemyofsoul from "../src/images/alchemy.jpg"
 import alchemyofsoul2 from"../src/images/alchemy2.jpg"
 import flash from "../src/images/thunder.png"
+import goodboy from "../src/images/goodboy.jpg"
 import { title } from "process";
 const movie = [
   {
@@ -56,7 +57,7 @@ const movie = [
     hot: "true",
     description:
       " (สงคราม ส่งด่วน) กระเเสโคตรเเรง สำหรับซีรีย์นี้ เลยมาลองดู เสี่ยวหยูในเรื่องคือโคตรmvp เป็นคนที่เชื่อมั่นall inเมื่อมั่นใจสมกับที่พูด ทั้งเรื่องไม่ค่อยมีฉากรักที่กูชอบเลย เเต่มันกลับทำได้โคตรน่าติดตาม ตัวร้ายน่ารำคาญเเต่ ไม่ได้ไร้สาระ ดูเป็นตัวร้ายที่ไม่ทให้หมดสนุกเกินไป ส่วนเรื่องราวก็โคตรเข้มข้ม เดายาก สนุกมากๆ มันปนทั้งตลก ความเเบบ ความได้ใจอะ มึงใเดือดกันทั้งสามผู้ถือหุ้นใหญ่ฉากเศร้าก็ทำได้ดี ไม่มีอไรชมไปมากกว่า นี่คือซีรีย์เเห่งปี",
-    category: "Action",
+    category: "Drama",
     rank: 4,
     ratings: { excitement: 10, romance: 5, emotion: 10, overall: 9.8 },
   },
@@ -110,6 +111,16 @@ const movie = [
     rank: 8,
     ratings: { excitement: 9.0, romance: 8.0, emotion: 7.0, overall: 9 },
   },
+   {
+    src: weakhero2,
+    title: "Weak hero class 2",
+    hot: "false",
+    description:
+      "สิ่งที่ชอบภาคนี้มีเเค่เรื่องการเเบ่งrankเเหละ เเละความอินจากภาคที่เเล้ว นาเเบคติน เเละก้ไอเเว่นtangurine โคตรเท่ ทำได้น้อยกว่าภาค1 เเต่ยังคงมาตรฐานความสนุกไว้ได้โอเค เเต่จบควายไปหน่อย รุมนาเเบคจิน เเบบหมาหมู่ เเต่ช่างมันบาคุเท่ดี ",
+    category: "Action",
+    rank: 8.5,
+    ratings: { excitement: 10, romance: 4, emotion: 8 , overall: 7.3 },
+  },
   {
     src: residentplaybook,
     title: "Resident Playbook",
@@ -126,7 +137,7 @@ const movie = [
     hot: "false",
     description:
       "ทนกระเเสไม่ไหว ภาคสองเเม่งโคตรดัง เเล้วพอดูตัวอย่าง มันมีระดับความเก่งที่ชัดมาก ชอบดูหนังที่มีคนเก่งเป็นrank มันดูน่าสนใจ เเละชอบทีมีคนเก่งเเบบเวอร์ๆอยู่ฝั่งพระเอก ฟิว solo levelingเเล้วคือพึ่งดูsolo leveling จบ เเล้วมาต่อ โคตรจะมัน มันสัสๆ ซูโฮเเม่งโคตรเท่ โคตรเเบกเรื่องนี้ ",
-    category: "Drama",
+    category: "Action",
     rank: 10,
     ratings: { excitement: 10, romance: 5, emotion: 8.5 , overall: 8.0 },
   },
@@ -201,20 +212,20 @@ const movie = [
     title: "Vagabond",
     hot: "false",
     description:
-      "A gripping mystery of a stuntman uncovering a conspiracy after a plane crash, leading him on a dangerous quest for truth.",
+      "กวานชิก ซีรีย์ดี เป็นซีรีย์ที่ปราณีตมาก เเต่มันเศร้าไป ไม่ถูกใจผม มันดีนะ เเต่เเค่ไม่เข้ากับผม กวานชิก ทำได้น่าสงสาร เเละซึ้งมากๆ เเต่มันไม่ได้น่าติดตามต่อขนาดนั้น",
     category: "Action",
     ratings: { excitement: 9, romance: 6.5, emotion: 6, overall: 7.3 },
   },
-   {
-    src: weakhero2,
-    title: "Weak hero class 2",
+  {
+  src: goodboy,
+    title: "Goodboy",
     hot: "false",
     description:
-      "สิ่งที่ชอบภาคนี้มีเเค่เรื่องการเเบ่งrankเเหละ เเละความอินจากภาคที่เเล้ว นาเเบคติน เเละก้ไอเเว่นtangurine โคตรเท่ ทำได้น้อยกว่าภาค1 เเต่ยังคงมาตรฐานความสนุกไว้ได้โอเค เเต่จบควายไปหน่อย รุมนาเเบคจิน เเบบหมาหมู่ เเต่ช่างมันบาคุเท่ดี ",
-    category: "Drama",
-    rank: 8.5,
-    ratings: { excitement: 10, romance: 4, emotion: 8 , overall: 7.3 },
+      "coming soon",
+    category: "Action",
+    ratings: { excitement: 9, romance: 6.5, emotion: 6, overall: 7.3 },
   },
+  
 ];
 
 function Collections() {
