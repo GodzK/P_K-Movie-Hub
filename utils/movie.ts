@@ -19,7 +19,6 @@ import alchemyofsoul from "../src/images/alchemy.jpg"
 import alchemyofsoul2 from"../src/images/alchemy2.jpg"
 import flash from "../src/images/thunder.png"
 import goodboy from "../src/images/goodboy.jpg"
-import { title } from "process";
 const movie = [
   {
     src: Twinkling,
