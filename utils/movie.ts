@@ -1,26 +1,3 @@
-import Qot from "../src/images/qot.jpg";
-import lovelyrunner from "../src/images/lovelyrunner.jpg";
-import startup from "../src/images/startup.jpg";
-import tangurine from "../src/images/tangurine.jpg";
-import topgun from "../src/images/topgun.jpg";
-import vagabond from "../src/images/vagabond.jpg";
-import twenty from "../src/images/20cen.jpg";
-import hyperknife from "../src/images/hyperknife.jpg";
-import nextdoor from "../src/images/nextdoor.jpg";
-import friendlyrivalry from "../src/images/friendly-rivalry.jpg";
-import mydearestnemesis from "../src/images/dearest-nemesis.jpg";
-import Twinkling from "../src/images/twinkling-watermelon.png";
-import Undercover from "../src/images/undercover.jpg";
-import residentplaybook from "../src/images/resident-playbook.png";
-import weakhero from "../src/images/weakhero.jpg";
-import weakhero2 from "../src/images/weakhero2.png";
-import moving from "../src/images/moving.jpg";
-import alchemyofsoul from "../src/images/alchemy.jpg";
-import alchemyofsoul2 from "../src/images/alchemy2.jpg";
-import flash from "../src/images/thunder.png";
-import goodboy from "../src/images/goodboy.jpg";
-import manhunt from "../src/images/manhunt.png";
-
 export interface Ratings {
   excitement: number;
   romance: number;
@@ -29,19 +6,45 @@ export interface Ratings {
 }
 
 export interface Movie {
-  src: string;
+  src: string; // URL หรือ path ของรูปภาพ
   title: string;
   hot: string;
   description: string;
-  category: "Series" | "Movies" | "Documentaries" | "Series";
+  category: "Series" | "Movies" | "Documentaries";
   genre: string;
   rank: number;
   ratings: Ratings;
 }
 
+// ฟังก์ชัน importAll สำหรับโหลดรูปภาพทั้งหมดใน Vite
+const importAll = () => {
+  const images: { [key: string]: string } = {};
+  const modules = import.meta.glob("../src/images/*.{png,jpg,jpeg}", { eager: true });
+  Object.keys(modules).forEach((path) => {
+    const fileName = path.split("/").pop()?.replace(/\.(png|jpg|jpeg)$/i, "") || "";
+    images[fileName] = (modules[path] as { default: string }).default;
+  });
+  return images;
+};
+
+// โหลดรูปภาพจากโฟลเดอร์ ../src/images
+const images = importAll();
+
+// Map ชื่อที่ไม่ตรงกันระหว่าง key ใน movie และชื่อไฟล์จริง
+const imageAlias: { [key: string]: string } = {
+  twenty: "20cen",
+  alchemyofsoul: "alchemy",
+  alchemyofsoul2: "alchemy2",
+  flash: "thunder",
+  Twinkling: "twinkling-watermelon",
+  Undercover: "undercover",
+  friendlyrivalry: "friendly-rivalry",
+  mydearestnemesis: "dearest-nemesis",
+};
+
 const movie: Movie[] = [
   {
-    src: Twinkling,
+    src: images[imageAlias.Twinkling],
     title: "Twinkling Watermelon",
     hot: "true",
     description:
@@ -52,7 +55,7 @@ const movie: Movie[] = [
     ratings: { excitement: 9, romance: 9.8, emotion: 10, overall: 10 },
   },
   {
-    src: Qot,
+    src: images["qot"],
     title: "Queen of Tears",
     hot: "true",
     description:
@@ -63,7 +66,7 @@ const movie: Movie[] = [
     ratings: { excitement: 8.0, romance: 10, emotion: 10, overall: 9.9 },
   },
   {
-    src: moving,
+    src: images["moving"],
     title: "Moving",
     hot: "true",
     description:
@@ -74,7 +77,7 @@ const movie: Movie[] = [
     ratings: { excitement: 10, romance: 9.5, emotion: 9, overall: 9.9 },
   },
   {
-    src: flash,
+    src: images[imageAlias.flash],
     title: "MAD UNICORN",
     hot: "true",
     description:
@@ -85,7 +88,7 @@ const movie: Movie[] = [
     ratings: { excitement: 10, romance: 5, emotion: 10, overall: 9.8 },
   },
   {
-    src: twenty,
+    src: images[imageAlias.twenty],
     title: "20th Century Girl",
     hot: "false",
     description:
@@ -96,7 +99,7 @@ const movie: Movie[] = [
     ratings: { excitement: 8.3, romance: 8.5, emotion: 10, overall: 9.5 },
   },
   {
-    src: topgun,
+    src: images["topgun"],
     title: "Top Gun",
     hot: "false",
     description:
@@ -107,7 +110,7 @@ const movie: Movie[] = [
     ratings: { excitement: 8.5, romance: 5.0, emotion: 10, overall: 9.3 },
   },
   {
-    src: alchemyofsoul,
+    src: images[imageAlias.alchemyofsoul],
     title: "Alchemy of Souls",
     hot: "false",
     description:
@@ -118,7 +121,7 @@ const movie: Movie[] = [
     ratings: { excitement: 8.5, romance: 6.0, emotion: 8, overall: 9.3 },
   },
   {
-    src: alchemyofsoul2,
+    src: images[imageAlias.alchemyofsoul2],
     title: "Alchemy of Souls 2",
     hot: "false",
     description:
@@ -129,7 +132,7 @@ const movie: Movie[] = [
     ratings: { excitement: 10, romance: 8.5, emotion: 9, overall: 9.3 },
   },
   {
-    src: hyperknife,
+    src: images["hyperknife"],
     title: "Hyper Knife",
     hot: "false",
     description:
@@ -140,7 +143,7 @@ const movie: Movie[] = [
     ratings: { excitement: 9.0, romance: 8.0, emotion: 7.0, overall: 9 },
   },
   {
-    src: weakhero2,
+    src: images["weakhero2"],
     title: "Weak Hero Class 2",
     hot: "false",
     description:
@@ -151,7 +154,7 @@ const movie: Movie[] = [
     ratings: { excitement: 10, romance: 4, emotion: 8, overall: 7.3 },
   },
   {
-    src: residentplaybook,
+    src: images["resident-playbook"],
     title: "Resident Playbook",
     hot: "false",
     description:
@@ -162,7 +165,7 @@ const movie: Movie[] = [
     ratings: { excitement: 8, romance: 8.8, emotion: 8.5, overall: 8.5 },
   },
   {
-    src: weakhero,
+    src: images["weakhero"],
     title: "Weak Hero Class 1",
     hot: "false",
     description:
@@ -173,7 +176,7 @@ const movie: Movie[] = [
     ratings: { excitement: 10, romance: 5, emotion: 8.5, overall: 8.0 },
   },
   {
-    src: lovelyrunner,
+    src: images["lovelyrunner"],
     title: "Lovely Runner",
     hot: "false",
     description:
@@ -184,7 +187,7 @@ const movie: Movie[] = [
     ratings: { excitement: 8, romance: 8.6, emotion: 7, overall: 7.5 },
   },
   {
-    src: Undercover,
+    src: images[imageAlias.Undercover],
     title: "Undercover High School",
     hot: "false",
     description:
@@ -195,7 +198,7 @@ const movie: Movie[] = [
     ratings: { excitement: 7, romance: 8.5, emotion: 7.5, overall: 7.3 },
   },
   {
-    src: friendlyrivalry,
+    src: images[imageAlias.friendlyrivalry],
     title: "Friendly Rivalry",
     hot: "false",
     description:
@@ -206,79 +209,80 @@ const movie: Movie[] = [
     ratings: { excitement: 7.0, romance: 7.5, emotion: 7.0, overall: 6.8 },
   },
   {
-    src: mydearestnemesis,
+    src: images[imageAlias.mydearestnemesis],
     title: "My Dearest Nemesis",
     hot: "false",
     description:
       "A romantic enemies-to-lovers tale where two coworkers clash daily, only to discover a deeper connection beneath the tension.",
     category: "Series",
     genre: "Romance",
-    rank: 14, // Assigned based on overall rating (7.0)
+    rank: 14,
     ratings: { excitement: 5, romance: 8.0, emotion: 7, overall: 7.0 },
   },
   {
-    src: nextdoor,
+    src: images["nextdoor"],
     title: "Next Door",
     hot: "false",
     description:
       "A quirky drama about neighbors whose lives intertwine unexpectedly, revealing secrets and building unlikely bonds.",
     category: "Series",
     genre: "Comedy",
-    rank: 15, // Assigned based on overall rating (6.8)
+    rank: 15,
     ratings: { excitement: 7.5, romance: 8, emotion: 8, overall: 6.8 },
   },
   {
-    src: startup,
+    src: images["startup"],
     title: "Start-Up",
     hot: "false",
     description:
       "A journey of young entrepreneurs chasing their dreams in the competitive world of tech startups, filled with ambition and romance.",
     category: "Series",
     genre: "Drama",
-    rank: 16, // Assigned based on overall rating (7.2)
+    rank: 16,
     ratings: { excitement: 10, romance: 9, emotion: 9, overall: 7.2 },
   },
   {
-    src: tangurine,
+    src: images["tangurine"],
     title: "Tangurine",
     hot: "false",
     description:
       "A bittersweet coming-of-age story set in a small town, where a girl discovers friendship and loss under tangerine trees.",
     category: "Series",
     genre: "Drama",
-    rank: 17, // Assigned based on overall rating (7.0)
+    rank: 17,
     ratings: { excitement: 7, romance: 10, emotion: 10, overall: 7.0 },
   },
   {
-    src: manhunt,
+    src: images["manhunt"],
     title: "The American Manhunt: Osama bin Laden",
     hot: "false",
     description:
       "นี่น่าจะเป็นหนังสารคดีเกี่ยวกับ 9/11 ที่ละเอียดที่สุดเเล้ว พาเราไปดูถึง อเมริกาหลังจากโดน 9/11 ว่าเค้าทำอย่างไรในการตามล่า อาชญากรหมายเลข 1 เเละ ทำให้เรารู้หลายมุม ทั้งการโดนด่าของหน่วยข่าวกรอง ความกดดันมากมายในการตามล่า เพราะบิน ลาเดน ไม่ใช่คนโง่ เเต่เค้าคืออัจฉริยะ ตั้งเเต่ บุช มาจนถึงโอบาม่า หนังดีๆเลย มี สามตอน เเละเข้มข้นทุกตอน",
     category: "Documentaries",
     genre: "Documentary",
-    rank: 18, // Assigned based on overall rating (7.0)
+    rank: 18,
     ratings: { excitement: 8, romance: 0, emotion: 8, overall: 7.0 },
   },
   {
-    src: vagabond,
+    src: images["vagabond"],
     title: "Vagabond",
     hot: "false",
     description:
       "กวานชิก ซีรีย์ดี เป็นซีรีย์ที่ปราณีตมาก เเต่มันเศร้าไป ไม่ถูกใจผม มันดีนะ เเต่เเค่ไม่เข้ากับผม กวานชิก ทำได้น่าสงสาร เเละซึ้งมากๆ เเต่มันไม่ได้น่าติดตามต่อขนาดนั้น",
     category: "Series",
     genre: "Action",
-    rank: 19, // Assigned based on overall rating (7.3)
+    rank: 19,
     ratings: { excitement: 9, romance: 6.5, emotion: 6, overall: 7.3 },
   },
   {
-    src: goodboy,
+    src: images["goodboy"],
     title: "Goodboy",
     hot: "false",
-    description: "โห เหี้ยมาก ตอนเเรกดีๆน่าน่าสนใจ เเต่เเม่งเริ่มเบียว ไปสู้กับอำนาจมืดรัฐบาล เเละเเต่ละตัวมีปมทุกตัว เเละเเบบ กำลังต่อยงี้ มึงก็วิ๊งๆที่หัว เเละเป็นกันทุกตัว ปัญญาอ่อนมาก เเม่งเอาดูไปสามตอนพอ",
+    description:
+      "โห เหี้ยมาก ตอนเเรกดีๆน่าน่าสนใจ เเต่เเม่งเริ่มเบียว ไปสู้กับอำนาจมืดรัฐบาล เเละเเต่ละตัวมีปมทุกตัว เเละเเบบ กำลังต่อยงี้ มึงก็วิ๊งๆที่หัว เเละเป็นกันทุกตัว ปัญญาอ่อนมาก เเม่งเอาดูไปสามตอนพอ",
     category: "Series",
     genre: "Action",
-    rank: 20, 
+    rank: 20,
     ratings: { excitement: 3, romance: 6, emotion: 2, overall: 4 },
   },
 ];
