@@ -1,4 +1,4 @@
-import React, { useState, useEffect } from 'react';
+import  { useState, useEffect } from 'react';
 import Navbar from "../components/Navbar";
 import Collections from "../../utils/movie";
 import Slider from "react-slick";
@@ -9,23 +9,6 @@ import Modal from "../components/Modal";
 import TopTier from "./toptier";
 import "../styles/collection.css";
 
-interface Ratings {
-  excitement: number;
-  romance: number;
-  emotion: number;
-  overall: number;
-}
-
-interface Movie {
-  src: string;
-  title: string;
-  hot: string;
-  description: string;
-  category: "Series" | "Movies" | "Documentaries" | "Others";
-  genre: string;
-  rank: number;
-  ratings: Ratings;
-}
 
 function Collection() {
   const [loading, setLoading] = useState(true);
