@@ -131,6 +131,8 @@ const movie: Movie[] = [
     rank: 7.5,
     ratings: { excitement: 10, romance: 8.5, emotion: 9, overall: 9.3 },
   },
+  
+
   {
     src: images["hyperknife"],
     title: "Hyper Knife",
@@ -164,6 +166,17 @@ const movie: Movie[] = [
     rank: 9,
     ratings: { excitement: 8, romance: 8.8, emotion: 8.5, overall: 8.5 },
   },
+    {
+    src: images["parasite"],
+    title: "Parasite",
+    hot: "false",
+    description:
+      "ชนชั้นปรสิท ผมได้ดูเกี่ยวกับเรื่องของการถ่ายภาพของเรื่องนี้เเล้วมันน่าสนใจ คือมันจะมเส้นเเบ่งระหว่างคนรวยกับคนจนในเเทบจะทุกฉาก หนังเรื่องนี้ ไม่ใช่ Action เเต่มันกลับสนุก โดยผมชอบเรื่องนี้เพราะมันไม่มีฉากให้น่าหงุดหงิด ทุกอย่างสนุกไปตาม flow?ี่ควรจะเป็น ไม่มีการพลิกล็อคอะไรให้น่าหงุดหงิด เเละเเต่ละตัวละครก็ทำได้อย่างดี น่าติดตามไปตลอด สนุกดีมาก",
+    category: "Movies",
+    genre: "Drama",
+    rank: 10,
+    ratings: { excitement: 8, romance: 5, emotion: 6, overall: 8 },
+  },
   {
     src: images["weakhero"],
     title: "Weak Hero Class 1",
@@ -172,7 +185,7 @@ const movie: Movie[] = [
       "ทนกระเเสไม่ไหว ภาคสองเเม่งโคตรดัง เเล้วพอดูตัวอย่าง มันมีระดับความเก่งที่ชัดมาก ชอบดูหนังที่มีคนเก่งเป็นrank มันดูน่าสนใจ เเละชอบทีมีคนเก่งเเบบเวอร์ๆอยู่ฝั่งพระเอก ฟิว solo levelingเเล้วคือพึ่งดูsolo leveling จบ เเล้วมาต่อ โคตรจะมัน มันสัสๆ ซูโฮเเม่งโคตรเท่ โคตรเเบกเรื่องนี้ ",
     category: "Series",
     genre: "Action",
-    rank: 10,
+    rank: 11,
     ratings: { excitement: 10, romance: 5, emotion: 8.5, overall: 8.0 },
   },
   {
@@ -183,7 +196,7 @@ const movie: Movie[] = [
       "ถ้ามันสนุกเหมือน3ตอนเเรกนะ มึงขึ้นไปอยู่กับwatermelonละสัส มึงdropเเบบน่าใจหายมาก ช่วงเเรกคือเวอณืจัด นางเอกเป้นfc เเละพระเอกตาย เลยย้อนเวลากลับไป สรุปพระเอกเเม่งเเอบชอบนางเอกมาตลอด ช่วยชีวืต เเบบบทโคตรเทพบุตร เเละก็นางเอกก็ควายได้ทุกตอน ก็เลยเริ่มเบื่อ เลยลงมาถึงอันดับนี้  พระนางทำให้เบื่อไวไปมาก",
     category: "Series",
     genre: "Romance",
-    rank: 11,
+    rank: 12,
     ratings: { excitement: 8, romance: 8.6, emotion: 7, overall: 7.5 },
   },
   {
@@ -194,7 +207,7 @@ const movie: Movie[] = [
       "ตอนเเรกสนุกนะ สนุกสัสๆ อันดับโคตรสูง เเต่พอดูhyper knifeเเล้วมาดูอ่ะ มันคนละชั้นจริงๆนะ มันชัดเจนมาก เลยเริ่มรู้ระดับหนังก็ตอนนั้นเเหละ ดูซีนอาจารมณ์มา เเละมาดูตลกโปกฮามันชัดไป เเต่ความฟิน ได้อยู่ เเละก็ตอนจบพีคสัสๆ",
     category: "Series",
     genre: "Comedy",
-    rank: 12,
+    rank: 13,
     ratings: { excitement: 7, romance: 8.5, emotion: 7.5, overall: 7.3 },
   },
   {
@@ -205,7 +218,7 @@ const movie: Movie[] = [
       "ดุเอาความฟิน พระนาง เเละก็เพื่อนพระเอก โคตรสวย สวยเเบบสัสๆ อนาคตไกลเเน่ ส่วนเนื้อเรื่องก็averageจากwebtoon ไม่ได้wowอะไร มีเเค่มาดูความสวยของตัวละคร เเต่เเค่นี่ขนาดมีเเค่ความสวยนะ เเสดงว่าเเม่งสวยจริงๆเพื่อน",
     category: "Series",
     genre: "Thriller",
-    rank: 13,
+    rank: 14,
     ratings: { excitement: 7.0, romance: 7.5, emotion: 7.0, overall: 6.8 },
   },
   {
@@ -216,7 +229,7 @@ const movie: Movie[] = [
       "A romantic enemies-to-lovers tale where two coworkers clash daily, only to discover a deeper connection beneath the tension.",
     category: "Series",
     genre: "Romance",
-    rank: 14,
+    rank: 15,
     ratings: { excitement: 5, romance: 8.0, emotion: 7, overall: 7.0 },
   },
   {
@@ -227,7 +240,7 @@ const movie: Movie[] = [
       "A quirky drama about neighbors whose lives intertwine unexpectedly, revealing secrets and building unlikely bonds.",
     category: "Series",
     genre: "Comedy",
-    rank: 15,
+    rank: 16,
     ratings: { excitement: 7.5, romance: 8, emotion: 8, overall: 6.8 },
   },
   {
@@ -238,7 +251,7 @@ const movie: Movie[] = [
       "A journey of young entrepreneurs chasing their dreams in the competitive world of tech startups, filled with ambition and romance.",
     category: "Series",
     genre: "Drama",
-    rank: 16,
+    rank: 17,
     ratings: { excitement: 10, romance: 9, emotion: 9, overall: 7.2 },
   },
   {
@@ -249,7 +262,7 @@ const movie: Movie[] = [
       "A bittersweet coming-of-age story set in a small town, where a girl discovers friendship and loss under tangerine trees.",
     category: "Series",
     genre: "Drama",
-    rank: 17,
+    rank: 18,
     ratings: { excitement: 7, romance: 10, emotion: 10, overall: 7.0 },
   },
   {
@@ -260,7 +273,7 @@ const movie: Movie[] = [
       "นี่น่าจะเป็นหนังสารคดีเกี่ยวกับ 9/11 ที่ละเอียดที่สุดเเล้ว พาเราไปดูถึง อเมริกาหลังจากโดน 9/11 ว่าเค้าทำอย่างไรในการตามล่า อาชญากรหมายเลข 1 เเละ ทำให้เรารู้หลายมุม ทั้งการโดนด่าของหน่วยข่าวกรอง ความกดดันมากมายในการตามล่า เพราะบิน ลาเดน ไม่ใช่คนโง่ เเต่เค้าคืออัจฉริยะ ตั้งเเต่ บุช มาจนถึงโอบาม่า หนังดีๆเลย มี สามตอน เเละเข้มข้นทุกตอน",
     category: "Documentaries",
     genre: "Documentary",
-    rank: 18,
+    rank: 19,
     ratings: { excitement: 8, romance: 0, emotion: 8, overall: 7.0 },
   },
   {
@@ -271,7 +284,7 @@ const movie: Movie[] = [
       "กวานชิก ซีรีย์ดี เป็นซีรีย์ที่ปราณีตมาก เเต่มันเศร้าไป ไม่ถูกใจผม มันดีนะ เเต่เเค่ไม่เข้ากับผม กวานชิก ทำได้น่าสงสาร เเละซึ้งมากๆ เเต่มันไม่ได้น่าติดตามต่อขนาดนั้น",
     category: "Series",
     genre: "Action",
-    rank: 19,
+    rank: 20,
     ratings: { excitement: 9, romance: 6.5, emotion: 6, overall: 7.3 },
   },
   {
@@ -282,7 +295,7 @@ const movie: Movie[] = [
       "โห เหี้ยมาก ตอนเเรกดีๆน่าน่าสนใจ เเต่เเม่งเริ่มเบียว ไปสู้กับอำนาจมืดรัฐบาล เเละเเต่ละตัวมีปมทุกตัว เเละเเบบ กำลังต่อยงี้ มึงก็วิ๊งๆที่หัว เเละเป็นกันทุกตัว ปัญญาอ่อนมาก เเม่งเอาดูไปสามตอนพอ",
     category: "Series",
     genre: "Action",
-    rank: 20,
+    rank: 21,
     ratings: { excitement: 3, romance: 6, emotion: 2, overall: 4 },
   },
 ];
