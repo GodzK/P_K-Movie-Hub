@@ -245,6 +245,7 @@ const movie: Omit<Movie, "rank">[] = [
   
     ratings: { excitement: 7, romance: 8.5, emotion: 7.5, overall: 7.3 },
   },
+ 
   {
     src: images[imageAlias.friendlyrivalry],
     title: "Friendly Rivalry",
@@ -321,6 +322,17 @@ const movie: Omit<Movie, "rank">[] = [
     genre: "Action",
   
     ratings: { excitement: 9, romance: 6.5, emotion: 6, overall: 7.3 },
+  },
+    {
+    src: images["gyeongseong2"],
+    title: "Gyeongseong Creature 2",
+    hot: "false",
+    description:
+      "13/07/2568 สัตว์สยองภาคสอง โคตรจะมืด มืดสัสๆ ดูไม่รู้เรื่องปวดตามาก เเละเเม่งเเบบ ถ้าไม่ได้ดูภาค 1 นะ ภาคสองคือหนังเหี้ยๆเรื่องนึงเลย เเม่งเเทบจะไม่สนุกเลย นอกจากตอนที่ 5 ที่พระเอกได้พลังมา ทั้งหมดเเม่งล้วนเเล้วเเต่ งงๆ มันทำให้งงตั้งเเต่ตอนเเรกถึงตอนห้า เกินครึ่งคือเเบบ คิดในหัวว่า คืออะไร เกิดอะไรขึ้น มันไม่ได้อยากรู้ เเต่คิดว่า ทำไมมึงไม่รีบบอกซักที กูงงไปหมดเเล้ว เเละ ความจิ้นคือตอนเเรกคิดว่าจะมากกว่าภาค 1 สุดท้ายเเม่งน้อยสัส น้อยมาก กอดๆอย่างเดียว ตัวร้ายก็ไม่มีอะไรเลย น่าผิดหวัง ",
+    category: "Series",
+    genre: "Comedy",
+  
+    ratings: { excitement: 5, romance: 4, emotion: 5, overall: 5 },
   },
   {
     src: images["goodboy"],
