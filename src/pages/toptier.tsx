@@ -48,7 +48,7 @@ const TopTier: React.FC = () => {
 
   const collection: Movie[] = Collections();
   const rankedMovies = collection
-    .filter((movie) => movie.rank && movie.rank <= 10)
+    .filter((movie) => movie.rank && movie.rank <= 15)
     .sort((a, b) => (a.rank || 0) - (b.rank || 0));
 
   return (
